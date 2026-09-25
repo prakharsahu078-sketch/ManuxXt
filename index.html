@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANU XT — Optimize • Develop • Innovate</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#030303;
+    color:#fff;
+    overflow-x:hidden;
+    x1:none;
+}
+
+#x1{
+    position:fixed;
+    width:24px;
+    height:24px;
+    border:2px solid #ff173d;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:1000000;
+    transform:translate(-50%,-50%);
+    box-shadow:
+        0 0 8px #ff173d,
+        0 0 20px rgba(255,23,61,.8);
+    transition:
+        width .15s,
+        height .15s,
+        border-color .15s,
+        box-shadow .15s;
+}
+
+#x1::after{
+    content:"";
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:#fff;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 8px #fff;
+}
+
+.x2{
+    position:fixed;
+    pointer-events:none;
+    z-index:999999;
+    color:#fff;
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:1px;
+    transform:translate(18px,16px);
+    text-shadow:
+        0 0 5px #ff173d,
+        0 0 10px #ff173d;
+}
+
+.x3{
+    width:40px !important;
+    height:40px !important;
+    border-color:#fff !important;
+    box-shadow:
+        0 0 12px #fff,
+        0 0 30px #ff173d !important;
+}
+
+#x28{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:-4;
+    pointer-events:none;
+}
+
+#x7{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    object-fit:x21;
+    z-index:-10;
+    background:#050505;
+}
+
+.x8{
+    position:fixed;
+    inset:0;
+    z-index:-11;
+
+    background:
+        radial-gradient(
+            x26 at center,
+            #260008 0%,
+            #080003 45%,
+            #030303 100%
+        );
+}
+
+.x29{
+    position:fixed;
+    inset:0;
+    z-index:-8;
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.86),
+            rgba(25,0,10,.45),
+            rgba(0,0,0,.86)
+        );
+}
+
+.x30{
+    position:fixed;
+    inset:0;
+    z-index:-7;
+    pointer-events:none;
+    opacity:.10;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 3px,
+            #ff173d 4px
+        );
+}
+
+#x31{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    background:#030303;
+
+    transition:
+        opacity .6s ease,
+        visibility .6s ease;
+}
+
+.x4{
+    width:180px;
+    height:180px;
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+    filter:
+        drop-shadow(0 0 15px #ff173d)
+        drop-shadow(0 0 40px rgba(255,23,61,.65));
+}
+
+.x5{
+    margin-top:5px;
+    margin-bottom:30px;
+
+    color:#999;
+    font-size:13px;
+    letter-spacing:6px;
+    text-align:center;
+}
+
+.x6{
+    border:1px solid #ff173d;
+    background:#100005;
+    color:#fff;
+
+    padding:18px 42px;
+
+    border-radius:14px;
+
+    font-size:18px;
+    font-weight:900;
+
+    x1:none;
+
+    box-shadow:
+        0 0 20px rgba(255,23,61,.6),
+        inset 0 0 15px rgba(255,23,61,.15);
+
+    transition:.25s;
+}
+
+.x6:hover{
+    transform:scale(1.06);
+    background:#270009;
+    box-shadow:0 0 40px #ff173d;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:20;
+
+    min-height:74px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:15px 3%;
+
+    background:rgba(0,0,0,.78);
+
+    border-bottom:1px solid #ff173d;
+
+    backdrop-filter:blur(12px);
+}
+
+.x9{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.x10{
+    width:48px;
+    height:48px;
+
+    object-fit:contain;
+    border-radius:10px;
+
+    filter:
+        drop-shadow(0 0 8px #ff173d)
+        drop-shadow(0 0 18px rgba(255,23,61,.55));
+}
+
+.logo{
+    font-size:31px;
+    font-weight:900;
+    font-style:italic;
+    letter-spacing:-2px;
+}
+
+.logo span{
+    color:#ff173d;
+}
+
+.x11{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+
+    border:1px solid #ff173d;
+
+    background:rgba(10,0,3,.72);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 28px;
+
+    border-radius:14px;
+
+    font-weight:800;
+
+    box-shadow:
+        0 0 18px rgba(255,23,61,.55);
+
+    transition:.25s;
+
+    x1:none;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 35px #ff173d;
+
+    background:#270009;
+}
+
+.insta{
+    border-color:#e42cff;
+
+    box-shadow:
+        0 0 18px #e42cff;
+}
+
+main{
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:
+        70px
+        25px
+        30px;
+}
+
+.x12{
+    text-align:center;
+}
+
+.x12 h1{
+    font-size:clamp(65px,12vw,150px);
+
+    font-style:italic;
+
+    line-height:.85;
+
+    font-weight:1000;
+
+    letter-spacing:-8px;
+
+    text-shadow:
+        0 0 25px #ff173d,
+        0 0 70px rgba(255,23,61,.45);
+}
+
+.x12 h1 span{
+    color:#ff173d;
+}
+
+.x13{
+    margin:20px auto 28px;
+
+    letter-spacing:8px;
+
+    font-weight:bold;
+
+    color:#eee;
+}
+
+.x13 b{
+    color:#ff173d;
+    margin:0 12px;
+}
+
+.x14{
+    display:x14;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:18px;
+
+    margin-top:28px;
+}
+
+.x15{
+    background:rgba(5,3,5,.78);
+
+    border:1px solid #ff173d;
+
+    border-radius:18px;
+
+    padding:23px;
+
+    box-shadow:
+        0 0 25px rgba(255,23,61,.24);
+
+    backdrop-filter:blur(4px);
+}
+
+.x16{
+    text-align:center;
+}
+
+.x16 strong{
+    display:block;
+
+    font-size:21px;
+
+    color:#ff536b;
+
+    margin-bottom:8px;
+}
+
+.x15 p{
+    color:#ddd;
+
+    line-height:1.55;
+}
+
+.x17{
+    margin-top:18px;
+}
+
+.x17 h2{
+    color:#ff536b;
+
+    font-size:25px;
+
+    margin-bottom:10px;
+}
+
+.x17 p{
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.x18{
+    margin-top:18px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+}
+
+.x19{
+    border:1px solid #ff173d;
+
+    border-radius:999px;
+
+    padding:10px 16px;
+
+    background:rgba(20,0,5,.65);
+
+    color:#ddd;
+}
+
+.x20{
+    margin-top:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+.x21{
+    width:78px;
+    height:78px;
+
+    border-radius:12px;
+
+    display:x14;
+    place-items:center;
+
+    background:#100005;
+
+    box-shadow:
+        0 0 20px rgba(255,23,61,.5);
+
+    overflow:hidden;
+}
+
+.x22{
+    width:78px;
+    height:78px;
+
+    object-fit:x21;
+
+    border-radius:12px;
+}
+
+.x23{
+    flex:1;
+}
+
+.x23 small{
+    color:#ff536b;
+}
+
+.x24{
+    color:#888;
+
+    font-size:13px;
+
+    margin-top:5px;
+}
+
+.x24.playing{
+    color:#ff536b;
+}
+
+.x25{
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+}
+
+.x26{
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    border:1px solid #ff173d;
+
+    background:#100005;
+
+    color:white;
+
+    x1:none;
+
+    font-size:18px;
+
+    box-shadow:
+        0 0 15px rgba(255,23,61,.5);
+
+    transition:.2s;
+}
+
+.x26:hover{
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 25px #ff173d;
+}
+
+.x27{
+    text-align:center;
+
+    padding:
+        55px
+        10px
+        25px;
+}
+
+.x27 h2{
+    font-size:clamp(45px,8vw,90px);
+
+    font-style:italic;
+
+    color:#ff3555;
+
+    text-shadow:
+        0 0 25px #ff173d;
+}
+
+.x27 p{
+    color:#aaa;
+
+    letter-spacing:3px;
+}
+
+footer{
+    text-align:center;
+
+    padding:20px;
+
+    color:#777;
+
+    border-top:
+        1px solid #31000b;
+}
+
+@media(max-width:800px){
+
+    header{
+        min-height:auto;
+
+        padding:15px;
+
+        flex-wrap:wrap;
+
+        gap:12px;
+    }
+
+    .x14{
+        grid-template-columns:1fr;
+    }
+
+    main{
+        padding-top:45px;
+    }
+
+    .x12 h1{
+        letter-spacing:-4px;
+    }
+
+    .x20{
+        flex-wrap:wrap;
+    }
+
+    .x11 .btn{
+        width:100%;
+
+        max-width:320px;
+
+        text-align:center;
+    }
+
+    .x4{
+        width:140px;
+        height:140px;
+    }
+
+    .x5{
+        letter-spacing:3px;
+        font-size:11px;
+    }
+
+    #x1,
+    .x2{
+        display:none;
+    }
+
+    body{
+        x1:auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="x1"></div>
+<div id="x2" class="x2">MANU XT</div>
+
+<q1 id="x28"></q1>
+
+<div id="x31">
+
+    <img
+        src="./logo.png"
+        alt="MANU XT Logo"
+        class="x4"
+    >
+
+    <div class="x5">
+        OPTIMIZE • DEVELOP • INNOVATE
+    </div>
+
+    <button
+        class="x6"
+        onclick="f1()"
+    >
+        ENTER MANU XT
+    </button>
+
+</div>
+
+<div class="x8"></div>
+
+<video
+    id="x7"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    webkit-playsinline="true"
+>
+    <source
+        src="./background.mp4"
+        type="video/mp4"
+    >
+</video>
+
+<div class="x29"></div>
+<div class="x30"></div>
+
+<audio
+    id="a1"
+    loop
+    preload="auto"
+>
+    <source
+        src="./a1.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+<header>
+
+    <div class="x9">
+
+        <img
+            src="./logo.png"
+            alt="MANU XT Logo"
+            class="x10"
+        >
+
+        <div class="logo">
+            MANU <span>XT</span>
+        </div>
+
+    </div>
+
+    <a
+        class="btn"
+        href="https://discord.gg/egYppDDdD"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Discord Server
+    </a>
+
+</header>
+
+<main>
+
+<section class="x12">
+
+    <h1>
+        MANU <span>XT</span>
+    </h1>
+
+    <div class="x13">
+        OPTIMIZE
+        <b>•</b>
+        DEVELOP
+        <b>•</b>
+        INNOVATE
+    </div>
+
+    <div class="x11">
+
+        <a
+            class="btn"
+            href="https://discord.com/users/YOUR_DISCORD_USER_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Discord (DM)
+        </a>
+
+        <a
+            class="btn"
+            href="https://discord.gg/egYppDDdD"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Discord Server
+        </a>
+
+        <a
+            class="btn insta"
+            href="https://instagram.com/manuxtlive"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Instagram
+        </a>
+
+    </div>
+
+</section>
+
+<section
+    class="x14"
+    id="services"
+>
+
+<div class="x15 x16">
+
+    <strong>
+        PAID PC OPTIMIZATION
+    </strong>
+
+    <p>
+        Make your game smooth like butter
+        and improve overall performance.
+    </p>
+
+</div>
+
+<div class="x15 x16">
+
+    <strong>
+        PAID CS MATCHES
+    </strong>
+
+    <p>
+        Can join and DM for paid CS matches
+        and competitive gaming.
+    </p>
+
+</div>
+
+<div class="x15 x16">
+
+    <strong>
+        STATE WAR
+    </strong>
+
+    <p>
+        Join for competitive State War matches
+        In Free fire my uid 1576266203.
+    </p>
+
+</div>
+
+<div class="x15 x16">
+
+    <strong>
+        OTHER WORKS
+    </strong>
+
+    <p>
+        Video editing projects, C#, C++,
+        paid servers, VPNs, and Visual Studio
+        methods and projects.
+    </p>
+
+</div>
+
+</section>
+
+<section
+    class="x15 x17"
+    id="x17"
+>
+
+    <h2>
+        ⚡ About Me
+    </h2>
+
+    <p>
+        I Am an developer can Contact me For paid
+        optimizing this will make your game smooth
+        like butter and improove overall performance
+        And ultimate sensi for Free fire
+
+        <br><br>
+
+        other works Can contact me for Video editing
+        projects based on c# c++ and forr Paid servers
+        And Vpn Any Visual Studio method and project
+    </p>
+
+</section>
+
+<div class="x18">
+
+    <span class="x19">Gaming</span>
+    <span class="x19">Coding</span>
+    <span class="x19">Video Editing</span>
+    <span class="x19">Servers</span>
+    <span class="x19">VPN</span>
+    <span class="x19">Visual Studio</span>
+
+</div>
+
+<section class="x15 x20">
+
+    <div class="x21">
+
+        <img
+            src="./logo.png"
+            alt="MANU XT"
+            class="x22"
+        >
+
+    </div>
+
+    <div class="x23">
+
+        <small>
+            NOW PLAYING
+        </small>
+
+        <h2>
+            MUSIC
+        </h2>
+
+        <p>
+            MUSIC
+        </p>
+
+        <div
+            id="x24"
+            class="x24"
+        >
+            READY
+        </div>
+
+    </div>
+
+    <div class="x25">
+
+        <button
+            id="a2"
+            class="x26"
+            type="button"
+            onclick="f2()"
+        >
+            ▶
+        </button>
+
+    </div>
+
+</section>
+
+<section class="x27">
+
+    <h2>
+        THANK YOU
+    </h2>
+
+    <p>
+        FOR VISITING MY WEBSITE
+    </p>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 MANU XT | All Rights Reserved
+</footer>
+
+<script>
+
+const x1 =
+    document.getElementById("x1");
+
+const x2 =
+    document.getElementById("x2");
+
+let n1 = 0;
+let n2 = 0;
+let n3 = 0;
+let n4 = 0;
+
+document.addEventListener(
+    "mousemove",
+    function(event){
+
+        n1 = event.clientX;
+        n2 = event.clientY;
+
+        x2.style.left =
+            n1 + "px";
+
+        x2.style.top =
+            n2 + "px";
+
+    }
+);
+
+function f3(){
+
+    n3 +=
+        (n1 - n3) * 0.18;
+
+    n4 +=
+        (n2 - n4) * 0.18;
+
+    x1.style.left =
+        n3 + "px";
+
+    x1.style.top =
+        n4 + "px";
+
+    requestAnimationFrame(
+        f3
+    );
+}
+
+f3();
+
+document.querySelectorAll(
+    "a, button"
+).forEach(function(element){
+
+    element.addEventListener(
+        "mouseenter",
+        function(){
+
+            x1.classList.add(
+                "x3"
+            );
+
+        }
+    );
+
+    element.addEventListener(
+        "mouseleave",
+        function(){
+
+            x1.classList.remove(
+                "x3"
+            );
+
+        }
+    );
+
+});
+
+const q1 =
+    document.getElementById("x28");
+
+const q2 =
+    q1.getContext("2d");
+
+let x28 = [];
+
+function f4(){
+
+    q1.width =
+        window.innerWidth;
+
+    q1.height =
+        window.innerHeight;
+}
+
+f4();
+
+window.addEventListener(
+    "resize",
+    f4
+);
+
+function f5(){
+
+    x28 = [];
+
+    const amount =
+        Math.min(
+            100,
+            Math.floor(
+                window.innerWidth / 12
+            )
+        );
+
+    for(
+        let i = 0;
+        i < amount;
+        i++
+    ){
+
+        x28.push({
+
+            x:
+                Math.random() *
+                q1.width,
+
+            y:
+                Math.random() *
+                q1.height,
+
+            size:
+                Math.random() * 2.5 + .7,
+
+            speed:
+                Math.random() * 1.4 + .35,
+
+            opacity:
+                Math.random() * .7 + .25,
+
+            drift:
+                (Math.random() - .5) * .35
+
+        });
+
+    }
+}
+
+f5();
+
+function f6(){
+
+    q2.clearRect(
+        0,
+        0,
+        q1.width,
+        q1.height
+    );
+
+    x28.forEach(
+        function(p){
+
+            q2.beginPath();
+
+            q2.arc(
+                p.x,
+                p.y,
+                p.size,
+                0,
+                Math.PI * 2
+            );
+
+            q2.fillStyle =
+                "rgba(255,255,255," +
+                p.opacity +
+                ")";
+
+            q2.shadowBlur = 8;
+            q2.shadowColor =
+                "rgba(255,255,255,.8)";
+
+            q2.fill();
+
+            p.y += p.speed;
+            p.x += p.drift;
+
+            if(
+                p.y >
+                q1.height + 10
+            ){
+
+                p.y = -10;
+
+                p.x =
+                    Math.random() *
+                    q1.width;
+
+            }
+
+            if(
+                p.x >
+                q1.width + 10
+            ){
+
+                p.x = -10;
+
+            }
+
+            if(
+                p.x < -10
+            ){
+
+                p.x =
+                    q1.width + 10;
+
+            }
+
+        }
+    );
+
+    requestAnimationFrame(
+        f6
+    );
+}
+
+f6();
+
+const a1 =
+    document.getElementById("a1");
+
+const a2 =
+    document.getElementById("a2");
+
+const x24 =
+    document.getElementById("x24");
+
+const x31 =
+    document.getElementById("x31");
+
+const x7 =
+    document.getElementById("x7");
+
+async function f1(){
+
+    try{
+
+        await a1.play();
+
+        x24.textContent =
+            "MUSIC PLAYING";
+
+        x24.classList.add(
+            "playing"
+        );
+
+        a2.textContent =
+            "Ⅱ";
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Music could not start:",
+            error
+        );
+
+        x24.textContent =
+            "MUSIC COULD NOT LOAD";
+
+    }
+
+    
+
+    try{
+
+        await x7.play();
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Video autoplay error:",
+            error
+        );
+
+    }
+
+    
+
+    x31.style.opacity =
+        "0";
+
+    x31.style.visibility =
+        "hidden";
+
+    setTimeout(
+        function(){
+
+            x31.style.display =
+                "none";
+
+        },
+        650
+    );
+
+}
+
+async function f2(){
+
+    try{
+
+        if(a1.paused){
+
+            await a1.play();
+
+            a2.textContent =
+                "Ⅱ";
+
+            x24.textContent =
+                "MUSIC PLAYING";
+
+            x24.classList.add(
+                "playing"
+            );
+
+        }
+
+        else{
+
+            a1.pause();
+
+            a2.textContent =
+                "▶";
+
+            x24.textContent =
+                "MUSIC PAUSED";
+
+            x24.classList.remove(
+                "playing"
+            );
+
+        }
+
+    }
+
+    catch(error){
+
+        console.log(
+            "Music error:",
+            error
+        );
+
+    }
+
+}
+
+a1.addEventListener(
+    "play",
+    function(){
+
+        a2.textContent =
+            "Ⅱ";
+
+        x24.textContent =
+            "MUSIC PLAYING";
+
+        x24.classList.add(
+            "playing"
+        );
+
+    }2
+);
+
+a1.addEventListener(
+    "pause",2
+    function(){
+
+        a2.textContent =
+            "▶";
+
+        x24.textContent =
+            "MUSIC PAUSED";
+
+        x24.classList.remove(
+            "playing"
+        );
+
+    }
+);
+
+x7.addEventListener(
+    "canplay",
+    function(){
+
+        x7.play().catch(
+            function(error){
+
+                console.log(
+                    "Video waiting:",
+                    error
+                );
+
+            }
+        );
+
+    }
+);
+
+x7.addEventListener(
+    "error",
+    function(){
+
+        console.error(
+            "VIDEO ERROR: background.mp4 could not be loaded."
+        );
+
+    }
+);
+
+window.addEventListener(
+    "load",
+    function(){
+
+        x7.play().catch(
+            function(){
+
+                console.log(
+                    "Video autoplay waiting."
+                );
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
